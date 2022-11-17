@@ -16,6 +16,10 @@
         ContentTemplate="{DataTemplate local:AdvanceCalc}"
         Route="AdvanceCalc" />
     <ShellContent
+        Title="History"
+        ContentTemplate="{DataTemplate local:History}"
+        Route="History" />
+    <ShellContent
         Title="Math Quiz"
         ContentTemplate="{DataTemplate local:MathQuiz}"
         Route="MathQuiz" />
