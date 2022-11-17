@@ -1,8 +1,8 @@
 namespace Calculator.Views;
 
-public partial class About : ContentPage
+public partial class History : ContentPage
 {
-	public About()
+	public History()
 	{
 		InitializeComponent();
 	}

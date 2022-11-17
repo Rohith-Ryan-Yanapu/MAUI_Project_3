@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Calculator"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             x:Class="Calculator.SelectTheme"
+             x:Class="Calculator.Views.SelectTheme"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
     <StackLayout Margin="20"
                  VerticalOptions="Center">

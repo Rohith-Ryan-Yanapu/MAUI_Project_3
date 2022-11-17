@@ -3,7 +3,7 @@
     x:Class="Calculator.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Calculator"
+    xmlns:local="clr-namespace:Calculator.Views"
     Shell.FlyoutBehavior="Flyout"
     >
 
@@ -15,6 +15,10 @@
         Title="Advanced Calculator"
         ContentTemplate="{DataTemplate local:AdvanceCalc}"
         Route="AdvanceCalc" />
+    <ShellContent
+        Title="History"
+        ContentTemplate="{DataTemplate local:History}"
+        Route="History" />
     <ShellContent
         Title="Math Quiz"
         ContentTemplate="{DataTemplate local:MathQuiz}"

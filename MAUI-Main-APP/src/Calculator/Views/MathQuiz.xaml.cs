@@ -1,6 +1,6 @@
 using Calculator.Models;
 using Calculator.Services;
-namespace Calculator;
+namespace Calculator.Views;
 using System.Diagnostics;
 
 public partial class MathQuiz : ContentPage
