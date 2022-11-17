@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace Calculator;
+namespace Calculator.Views;
 
 public partial class AdvanceCalc : ContentPage
 {

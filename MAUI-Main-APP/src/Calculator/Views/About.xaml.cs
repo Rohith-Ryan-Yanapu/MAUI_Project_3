@@ -1,4 +1,4 @@
-namespace Calculator;
+namespace Calculator.Views;
 
 public partial class About : ContentPage
 {
