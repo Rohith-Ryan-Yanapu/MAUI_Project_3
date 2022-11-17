@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="Calculator.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Calculator"
+    Shell.FlyoutBehavior="Flyout"
+    >
+
+    <ShellContent
+        Title="Calculator"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Advanced Calculator"
+        ContentTemplate="{DataTemplate local:AdvanceCalc}"
+        Route="AdvanceCalc" />
+    <ShellContent
+        Title="Math Quiz"
+        ContentTemplate="{DataTemplate local:MathQuiz}"
+        Route="MathQuiz" />
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate local:About}"
+        Route="About" />
+    <ShellContent
+        Title="Theme Selection"
+        ContentTemplate="{DataTemplate local:SelectTheme}"
+        Route="ThemeSelectionPage" />
+</Shell>

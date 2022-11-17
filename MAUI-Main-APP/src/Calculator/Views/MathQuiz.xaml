@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MathQuiz"
+             Title="MathQuiz"
+             BackgroundColor="White">
+
+    <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*,*">
+        <Button x:Name="StartButton" Text="Start" class="start"
+                HorizontalOptions="Center" VerticalOptions="Center" 
+                IsVisible="true"
+                Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"
+                FontSize="25" FontFamily="beach"
+                LineBreakMode="NoWrap" MinimumWidthRequest="200" MinimumHeightRequest="50"
+                Clicked="Started"/>
+        <Label x:Name="CorrectAnswer" Text="Correct!" TextColor="Green"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand" 
+                IsVisible="false"
+                Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                FontSize="25"
+                LineBreakMode="NoWrap" MinimumWidthRequest="200" MinimumHeightRequest="50"/>
+        <Label x:Name="IncorrectAnswer" Text="Incorrect!" TextColor="Red"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand" 
+                IsVisible="false"
+                Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                FontSize="25"
+                LineBreakMode="NoWrap" MinimumWidthRequest="200" MinimumHeightRequest="50"/>
+        <HorizontalStackLayout 
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Grid.ColumnSpan="5" 
+            Grid.Row="0" IsVisible="false"
+            x:Name="ScoreLayout">
+            <Label FontSize="22" Text="Score:" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+            <Label x:Name="ScoreValue" FontSize="22" LineBreakMode="NoWrap" Text="" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+            <Label FontSize="22" LineBreakMode="NoWrap" Text="/" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+            <Label x:Name="TotalValue" FontSize="22" LineBreakMode="NoWrap" Text="" HorizontalTextAlignment="End" VerticalTextAlignment="End"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout 
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Grid.ColumnSpan="3" 
+            Grid.Row="1"
+            IsVisible="false"
+            x:Name="QuestionLayout">
+            <Label x:Name="QuizExpression" FontSize="30" LineBreakMode="NoWrap" Text="E"/>
+            <Label FontSize="30" LineBreakMode="NoWrap" Text="=?"/>
+        </HorizontalStackLayout>
+        <VerticalStackLayout 
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Grid.ColumnSpan="3" 
+            Grid.RowSpan="2" 
+            Grid.Row="2" 
+            IsVisible="false"
+            x:Name="OptionsLayout">
+            <Button x:Name="Option1" Text="" CornerRadius="30" Clicked="checkAnswer1" Padding="30,0,30,0" Margin="0,10,0,10"/>
+            <Button x:Name="Option2" Text="" CornerRadius="30" Clicked="checkAnswer2" Padding="30,0,30,0" Margin="0,10,0,10"/>
+            <Button x:Name="Option3" Text="" CornerRadius="30" Clicked="checkAnswer3" Padding="30,0,30,0" Margin="0,10,0,10"/>
+        </VerticalStackLayout>
+        <Button Text="Try Again" Grid.Row="5" Grid.Column="0" CornerRadius="50" IsVisible="false" x:Name="TryAgain" FontSize="22" Clicked="clickedTryAgain"/>
+        <Button Text="Restart" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" CornerRadius="50" IsVisible="false" x:Name="Restart" FontSize="22" Clicked="restart" />
+        <Button Text="Skip" Grid.Row="5" Grid.Column="4" CornerRadius="50" IsVisible="false" x:Name="Skip" FontSize="22" Clicked="clickedSkip"/>
+    </Grid>
+</ContentPage>

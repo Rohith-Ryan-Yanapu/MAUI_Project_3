@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="Calculator.GreenTheme">
+
+    <Color x:Key="PageBackgroundColor">#69d171</Color>
+    <Color x:Key="PrimaryTextColor">Black</Color>
+    <Color x:Key="ButtonBackgroundColor">#68da97</Color>
+    <Color x:Key="TransparentColor">Transparent</Color>
+    <Color x:Key="TextColor">White</Color>
+    <Color x:Key="DropColor">Gray</Color>
+
+    <Style TargetType="Button">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="FontSize" Value="32"/>
+        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+</ResourceDictionary>
