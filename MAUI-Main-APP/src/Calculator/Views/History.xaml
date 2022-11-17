@@ -5,7 +5,14 @@
              Title="History">
     <ScrollView>
         <VerticalStackLayout>
-            <CollectionView EmptyView="No History Recorded" >
+            <CollectionView ItemsSource="{Binding HistoryData}" EmptyView="No History Recorded" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type x:String}">
+                        <Frame>
+                            <Label Text="{Binding .}" FontSize="22"/>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
             </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
