@@ -4,20 +4,15 @@ using System.Runtime.CompilerServices;
 
 namespace Calculator.ViewModels;
 
-public class HistoryPageViewModel 
+public class HistoryPageViewModel : INotifyPropertyChanged
 {
 
+    public event PropertyChangedEventHandler PropertyChanged;
 
     private ObservableCollection<String> historyCollection;
     public HistoryPageViewModel()
     {
         historyCollection = new ObservableCollection<String>();
-
-        historyCollection.Add("2+3=5");
-        historyCollection.Add("2-3=-1");
-        historyCollection.Add("2*3=6");
-        historyCollection.Add("2/3=0.66");
-        historyCollection.Add("2%3=0");
     }
 
     public ObservableCollection<String> HistoryData
@@ -25,4 +20,13 @@ public class HistoryPageViewModel
         get => historyCollection;
     }
 
+    public void AddHistoryList(String exp, String ans)
+    {
+
+        historyCollection.Add(exp + "=" + ans);
+        OnPropertyChanged("history");
+        OnPropertyChanged();
+    }
+
+    public void OnPropertyChanged([CallerMemberName] string name = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }
