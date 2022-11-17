@@ -98,7 +98,7 @@ public partial class MainPage : ContentPage
             System.Diagnostics.Debug.WriteLine(this.equation);
             var v = dt.Compute(this.equation, "");
             this.resultText.Text = v.ToString();
-
+            this.CurrentCalculation.Text = this.displayText;
             App.historyList.AddHistoryList(this.displayText, this.resultText.Text);
         }
         else

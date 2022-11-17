@@ -9,6 +9,7 @@ public partial class AdvanceCalc : ContentPage
     {
         InitializeComponent();
         OnClear(this, null);
+        BindingContext = App.historyList;
 
     }
     string currentEntry = "";
@@ -111,8 +112,9 @@ public partial class AdvanceCalc : ContentPage
             var v = dt.Compute(this.equation, "");
             this.resultText.Text = v.ToString();
             this.CurrentCalculation.Text = this.displayText;
+            App.historyList.AddHistoryList(this.displayText, this.resultText.Text);
         }
-        if (currentState == 2)
+        else
         {
             if (secondNumber == 0)
                 LockNumberValue(resultText.Text);
@@ -120,8 +122,9 @@ public partial class AdvanceCalc : ContentPage
             double result = Calculator.Calculate(firstNumber, secondNumber, mathOperator);
 
             this.CurrentCalculation.Text = this.displayText;
-
             this.resultText.Text = this.equation;
+
+            App.historyList.AddHistoryList(this.CurrentCalculation.Text, this.resultText.Text);
 
             firstNumber = result;
             secondNumber = 0;
